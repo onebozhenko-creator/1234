@@ -1,0 +1,183 @@
+@font-face {
+  font-family: 'Zalando Sans';
+  src: url('../assets/fonts/ZalandoSans-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'Zalando Sans';
+  src: url('../assets/fonts/ZalandoSans-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Zalando Sans';
+  src: url('../assets/fonts/ZalandoSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Zalando Sans';
+  src: url('../assets/fonts/ZalandoSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 1600px;
+  height: 900px;
+  overflow: hidden;
+  font-family: 'Zalando Sans', sans-serif;
+}
+
+.banner {
+  position: relative;
+  width: 1600px;
+  height: 900px;
+  overflow: hidden;
+}
+
+/* Grid overlay */
+.grid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.grid-overlay .v-line {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 100%;
+}
+
+.grid-overlay .h-line {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+
+/* Light theme grid */
+.theme-light .grid-overlay .v-line,
+.theme-light .grid-overlay .h-line {
+  background: #dee8e6;
+}
+
+/* Dark theme grid */
+.theme-dark .grid-overlay .v-line,
+.theme-dark .grid-overlay .h-line {
+  background: rgba(222, 232, 230, 0.12);
+}
+
+/* Gradient blurs */
+.gradient-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(200px);
+  z-index: 0;
+}
+
+.blob-green {
+  background: radial-gradient(circle, rgba(64, 193, 172, 0.5), rgba(130, 230, 180, 0.8));
+}
+
+.blob-orange {
+  background: radial-gradient(circle, rgba(255, 180, 80, 0.5), rgba(255, 200, 100, 0.7));
+}
+
+.blob-teal {
+  background: radial-gradient(circle, rgba(40, 160, 140, 0.4), rgba(80, 200, 170, 0.6));
+}
+
+/* Everstake logo */
+.everstake-logo {
+  position: absolute;
+  z-index: 10;
+  height: 32px;
+  width: auto;
+}
+
+/* Content layer */
+.content {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+}
+
+/* Text styles matching Figma */
+.text-subtitle {
+  font-family: 'Zalando Sans', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.text-title {
+  font-family: 'Zalando Sans', sans-serif;
+  font-weight: 200;
+}
+
+.text-title-lg {
+  font-size: 96px;
+  line-height: 1.04;
+}
+
+.text-title-xl {
+  font-size: 111px;
+  line-height: 1.04;
+}
+
+.text-title-xxl {
+  font-size: 128px;
+  line-height: 1.04;
+}
+
+.text-title-md {
+  font-size: 86px;
+  line-height: 1.08;
+}
+
+/* Color themes */
+.theme-light {
+  background: #f5fffd;
+  color: #034638;
+}
+
+.theme-dark {
+  background: linear-gradient(180deg, #034638 75%, #012d24 100%);
+  color: #f5fffd;
+}
+
+/* Partner logo */
+.partner-logo {
+  max-width: 380px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+}
+
+/* Divider line (vertical separator in split layouts) */
+.divider {
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  top: 0;
+  z-index: 2;
+}
+
+.theme-light .divider {
+  background: #dee8e6;
+}
+
+.theme-dark .divider {
+  background: rgba(222, 232, 230, 0.12);
+}
