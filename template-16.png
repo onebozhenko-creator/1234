@@ -1,0 +1,24 @@
+# --- Slack credentials ---------------------------------------------------
+SLACK_BOT_TOKEN=xoxb-your-bot-token
+SLACK_SIGNING_SECRET=your-signing-secret
+SLACK_APP_TOKEN=xapp-your-app-level-token
+
+# --- Public URL for image previews --------------------------------------
+# Slack `image` blocks need a public HTTPS URL. The bot serves preview
+# PNGs (templates + logos) from PORT. Set this to your public origin.
+#
+# On Railway: leave empty — `RAILWAY_PUBLIC_DOMAIN` is used automatically.
+# Locally: expose a tunnel (ngrok / cloudflared) and set it here.
+PUBLIC_BASE_URL=
+
+# --- Server port ---------------------------------------------------------
+PORT=3000
+
+# --- Approver --------------------------------------------------------------
+# Display name shown on the "Approved by …" button.
+APPROVER_NAME=Maksym Kunytsia
+
+# Slack user ID of the approver — the ONLY person allowed to click
+# "Approved by …". Leave empty to fail closed (nobody can approve).
+# To find: in Slack click the user's profile → ⋮ More → Copy member ID.
+APPROVER_USER_ID=U08CA4E0DC2

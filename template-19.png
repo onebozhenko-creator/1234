@@ -1,0 +1,8 @@
+node_modules/
+output/
+.env
+.DS_Store
+APR background/
+Bacgrounds for v2/
+Collaboration background/
+Crypto logos/
